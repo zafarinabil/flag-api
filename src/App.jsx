@@ -9,7 +9,7 @@ import {
 import './App.css';
 
 // Pages
-import Countries from './pages/Countries';
+import Countries, {CountriesLoader} from './pages/Countries';
 import CountryDetails from './pages/CountryDetails';
 
 // Layouts
@@ -17,7 +17,7 @@ import RootLayout from './layout/Rootlayout';
 
 const routesFromElements = createRoutesFromElements(
   <Route path="/" element={<RootLayout />}>
-    <Route index element={<Countries />} />
+    <Route index element={<Countries />} loader={CountriesLoader} />
     <Route path="/countries/:code" element={<CountryDetails />} />
   </Route>
 );
