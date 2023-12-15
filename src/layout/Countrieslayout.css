@@ -1,0 +1,65 @@
+.countries-layout-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+/* Reset some default styles for consistency */
+
+
+/* Basic styling for the filter container */
+.region-filter {
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+/* Label styling */
+.filter-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333; /* Adjust the color to match your overall color scheme */
+}
+
+/* Dropdown styling */
+.custom-dropdown {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 4px;
+  background-color: #fff; /* White background */
+  color: #333; /* Text color */
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+/* Style the default option differently */
+.default-option {
+  font-style: italic;
+  color: #888; /* Adjust to a lighter color to indicate it's a default option */
+}
+
+/* Style the selected option for better visibility */
+.custom-dropdown option:checked {
+  background-color: #f0f0f0; /* Light gray background for the selected option */
+}
+
+/* Hover effect on the dropdown */
+.custom-dropdown:hover {
+  border-color: #666; /* Darker border on hover */
+}
+
+/* Search bar styles */
+
+.search-bar input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--secondary-background);
+    color: var(--text-color);
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
