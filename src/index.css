@@ -1,212 +1,257 @@
+/* styles.css */
+/* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-/* Define color variables in :root */
 :root {
-  --primary-background: #f5f5f5;
-  --secondary-background: #ffffff;
-  --text-color: #333333;
-  --accent-color: #2196f3; /* A contrasting color for accent */
-  --box-shadow: rgba(0, 0, 0, 0.1);
+	--primary-background: #f5f5f5;
+	--secondary-background: #ffffff;
+	--text-color: #333333;
+	--accent-color: #2196f3;
+	--box-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Body styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-  background: var(--primary-background);
-  color: var(--text-color);
+/* Light theme styles */
+.root-layout.light-theme {
+	--primary-background: #f5f5f5;
+	--secondary-background: #ffffff;
+	--text-color: #333333;
+	--accent-color: #2196f3;
+	--box-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* App container styles */
-.App {
-  margin-top: 80px;
-  width: 100vw;
-  padding: 20px;
+/* Dark theme styles */
+.root-layout.dark-theme {
+	--primary-background: #1f1f1f;
+	--secondary-background: #2c2c2c;
+	--text-color: #ffffff;
+	--accent-color: #2196f3;
+	--box-shadow: rgba(255, 255, 255, 0.1);
 }
 
 /* Reset styles for all elements */
 * {
-  box-sizing: border-box;
-  margin: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Body styles */
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--primary-background);
+	color: var(--text-color);
+}
+
+/* App container styles */
+.App {
+	margin-top: 80px;
+	width: 100vw;
+	padding: 0px;
+}
+
+/* Basic styling for the filter container */
+.region-filter {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	margin-right: 50px;
+}
+
+/* Label styling */
+.filter-label {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 8px;
+	color: var(--text-color);
+}
+
+/* Dropdown styling */
+.custom-dropdown {
+	width: 100%;
+	padding: 10px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: var(--secondary-background);
+	color: var(--text-color);
+	cursor: pointer;
+	transition: border-color 0.3s ease;
+}
+
+/* Style the default option differently */
+.default-option {
+	font-style: italic;
+	color: #888;
+}
+
+/* Style the selected option for better visibility */
+.custom-dropdown option:checked {
+	background-color: #f0f0f0;
+}
+
+/* Hover effect on the dropdown */
+.custom-dropdown:hover {
+	border-color: #666;
 }
 
 /* Paragraph styles */
 p {
-  margin: 20px 0;
-  line-height: 1.5;
+	margin: 20px 0;
+	line-height: 1.5;
 }
 
 /* Navbar styles */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  background-color: var(--secondary-background);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  box-shadow: 0 4px 8px var(--box-shadow);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	background-color: var(--secondary-background);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	box-shadow: 0 4px 8px var(--box-shadow);
 }
-
-
 
 /* Logo styles */
 .logo {
-  width: 180px;
-  object-fit: contain;
+	width: 180px;
+	object-fit: contain;
 }
 
 /* Flag styles */
 .flag {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  border-radius: 8px;
+	width: 100%;
+	max-width: 320px;
+	height: auto;
+	border-radius: 8px;
 }
 
 /* Countries container styles */
 .countries {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
 /* Country card styles */
 .countries-card {
-    width: 300px;
-    background-color: var(--secondary-background);
-    margin: 50px;
-    padding: 0px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
+	width: 300px;
+	background-color: var(--secondary-background);
+	color: var(--text-color);
+	margin: 50px;
+	padding: 0px;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .countries-card:hover {
-  transition: all 0.4s ease-out;
-  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
-  top: -4px;
-  background-color: rgb(209, 209, 209);
+	transition: all 0.4s ease-out;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.377);
+	top: -4px;
+	background-color: rgb(162, 162, 162);
 }
 
 /* Country detail styles */
 .country-detail {
-  padding: 20px;
+	padding: 20px;
 }
 
 /* CountryDetails */
 .country-details-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: var(--primary-background);
 }
 
 .country-details-card {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  text-align: center;
+	background-color: var(--secondary-background);
+	color: var(--text-color);
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	text-align: center;
 }
 
 .flag-details {
-  width: 100%; /* Adjust the size as needed */
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
 }
 
 .country-details-loading {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--text-color);
 }
 
 .h2-flagApp {
-  text-decoration: none;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--accent-color);
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--text-color);
 }
 
 .h2-flagApp:hover {
-  transition: all 0.2s ease-out;
-  text-decoration: underline;
-  color: #1565c0;
-  font-size: 24.5px;
+	transition: all 0.2s ease-out;
+	text-decoration: underline;
+	color: var(--text-color);
+	font-size: 24.5px;
 }
 
 /* Search bar styles */
 .search-bar {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .search-bar input {
-  padding: 10px;
-  border: none;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
-  border-radius: 5px;
-  font-size: 16px;
-  background-color: var(--primary-background);
-  color: var(--text-color);
-  margin: 8px;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	font-size: 16px;
+	background-color: var(--secondary-background);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	color: var(--text-color);
+	margin: 8px;
 }
 
 .search-bar button {
-  padding: 10px 20px;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  margin: 8px;
+	padding: 10px 20px;
+	background-color: var(--secondary-background);
+	color: var(--text-color);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease;
+	margin: 8px;
 }
 
 .search-bar button:hover {
-  background-color: #d84315; /* Darken on hover */
+	background-color: #000000;
+	color: #fff;
+}
+
+.countries-layout {
+	background-color: var(--primary-background);
+	height: 100vh;
 }
 
 .countries-layout-container {
-  display: flex;
-  justify-content: space-between;
+	padding: 30px;
+	display: flex;
+	justify-content: space-between;
 }
 
-/* Add this to your CSS file or style section */
-
-.region-filter {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.filter-label {
-  margin-right: 10px;
-}
-
-.custom-dropdown {
-  padding: 8px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.default-option {
-  font-style: italic;
-  color: #888;
-}
-
-/* Style for dropdown arrow (optional) */
-.custom-dropdown::after {
-  content: '▼';
-  margin-left: 5px;
+.nav-links img {
+	background-color: #fff;
+	border-radius: 50%;
 }
