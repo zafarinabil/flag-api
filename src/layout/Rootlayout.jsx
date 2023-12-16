@@ -28,7 +28,7 @@ const RootLayout = () => {
 			<header>
 				<nav className="navbar">
 					<NavLink className="h2-flagApp" to="/">
-						The Flag App
+						Countries
 					</NavLink>
 					<img className="logo" src={isDarkTheme ? logoDark : logoLight} alt="Techover" />
 					<div className="nav-links">
@@ -37,7 +37,6 @@ const RootLayout = () => {
 							src={themeToggleSvg}
 							alt="Toggle Theme"
 							className="theme-toggle"
-							style={{ width: '40px' }}
 							onClick={toggleTheme}
 						/>
 					</div>
