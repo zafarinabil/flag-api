@@ -242,7 +242,7 @@ p {
 
 .countries-layout {
 	background-color: var(--primary-background);
-	height: 100vh;
+	height: auto;
 }
 
 .countries-layout-container {
