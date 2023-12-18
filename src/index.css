@@ -160,7 +160,7 @@ p {
 /* Country card styles */
 .countries-card {
 	width: 300px;
-	height: 400px; /* Set a fixed height for consistency */
+	height: 450px; /* Set a fixed height for consistency */
 	background-color: var(--secondary-background);
 	color: var(--text-color);
 	margin: 20px;
@@ -251,7 +251,6 @@ p {
 	transition: all 0.2s ease-out;
 	text-decoration: underline;
 	color: var(--head-color);
-	font-size: 24.5px;
 }
 
 /* Search bar styles */
@@ -271,7 +270,6 @@ p {
 	margin: 8px;
 	width: 500px;
 	height: 50px;
-	margin-top: 0;
 }
 
 .countries-layout {
@@ -294,7 +292,7 @@ p {
 	align-items: center;
 	margin-right: 50px;
 	color: var(--head-color);
-	font-size: 16px;
+	font-size: 20px;
 }
 
 .nav-links :hover {
@@ -305,7 +303,7 @@ p {
 }
 
 .nav-links img {
-	width: 40px;
+	width: 30px;
 	margin-right: 10px;
 }
 
@@ -394,6 +392,7 @@ p {
 
 	.countries-layout-container {
 		margin-left: 35px;
+		padding-top: 240px;
 		gap: 0;
 		padding: 0;
 		flex-direction: column;
@@ -411,6 +410,10 @@ p {
 	.search-bar input {
 		padding: 15px;
 		font-size: 14px;
+	}
+
+	.nav-links {
+		font-size: 16px;
 	}
 
 	.nav-links img {

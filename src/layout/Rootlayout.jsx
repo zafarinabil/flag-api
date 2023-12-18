@@ -34,7 +34,7 @@ const RootLayout = () => {
 			<header>
 				<nav className="navbar">
 					<NavLink className="h2-flagApp" to="/">
-						Countries
+						The Flag App
 					</NavLink>
 					<img className="logo" src={isDarkTheme ? logoDark : logoLight} alt="Techover" />
 					<div className="nav-links" onClick={handleThemeToggle}>
