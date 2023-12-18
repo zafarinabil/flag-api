@@ -61,7 +61,6 @@ const CountriesLayout = () => {
 				<SearchBar onSearch={handleSearch} />
 				<div className="region-filter">
 					<label htmlFor="region" className="filter-label">
-						Regions 
 					</label>
 					<select
 						id="region"
@@ -70,7 +69,7 @@ const CountriesLayout = () => {
 						className="custom-dropdown"
 					>
 						<option value="" className="default-option">
-							All Regions
+							Filter by region
 						</option>
 						<option value="America">🌎 America</option>
 						<option value="Asia">🌏 Asia</option>

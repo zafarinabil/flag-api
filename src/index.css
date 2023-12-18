@@ -1,6 +1,6 @@
 /* styles.css */
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
 	--primary-background: #f5f5f5;
@@ -8,24 +8,27 @@
 	--text-color: #333333;
 	--accent-color: #2196f3;
 	--box-shadow: rgba(0, 0, 0, 0.1);
+	font-family: 'Open Sans', sans-serif;
 }
 
 /* Light theme styles */
 .root-layout.light-theme {
 	--primary-background: #f5f5f5;
 	--secondary-background: #ffffff;
-	--text-color: #333333;
-	--accent-color: #2196f3;
+	--text-color: #939393;
+	--head-color: #3d3d3d;
 	--box-shadow: rgba(0, 0, 0, 0.1);
+	--hover-color: #dbdbdb;
 }
 
 /* Dark theme styles */
 .root-layout.dark-theme {
-	--primary-background: #1f1f1f;
-	--secondary-background: #2c2c2c;
-	--text-color: #ffffff;
-	--accent-color: #2196f3;
-	--box-shadow: rgba(255, 255, 255, 0.1);
+	--primary-background: #202C36;
+	--secondary-background: #2B3844;
+	--text-color: #cbcbcb;
+	--head-color: #fff5f5;
+	--box-shadow: rgba(0, 0, 0, 0.1);
+	--hover-color: #202c36;
 }
 
 /* Reset styles for all elements */
@@ -39,7 +42,18 @@
 body {
 	font-family: 'Poppins', sans-serif;
 	background-color: var(--primary-background);
-	color: var(--text-color);
+}
+
+.App {
+	background-color: var(--primary-background);
+}
+
+main {
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3 {
+	color: var(--head-color);
 }
 
 /* App container styles */
@@ -73,9 +87,10 @@ body {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	background-color: var(--secondary-background);
-	color: var(--text-color);
+	color: var(--head-color);
 	cursor: pointer;
 	transition: border-color 0.3s ease;
+	height: 50px;
 }
 
 /* Style the default option differently */
@@ -123,11 +138,14 @@ p {
 
 /* Flag styles */
 .flag {
-	width: 100%;
-	max-width: 320px;
-	height: auto;
-	border-radius: 8px;
-}
+	width: 100%; /* Ensure the flag takes up the full width of its container */
+	height: 50%; /* Set a fixed height for consistency */
+	object-fit:cover; /* Maintain aspect ratio and cover the container */
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-style: none;
+  }
+  
 
 /* Countries container styles */
 .countries {
@@ -135,29 +153,32 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	margin-top: 0px;
 }
 
 /* Country card styles */
 .countries-card {
 	width: 300px;
+	height: 400px; /* Set a fixed height for consistency */
 	background-color: var(--secondary-background);
 	color: var(--text-color);
-	margin: 50px;
+	margin: 20px;
 	padding: 0px;
-	border-radius: 10px;
-	box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
+	border-radius: 5px;
+	box-shadow: var(--box-shadow);
+  }
 
 .countries-card:hover {
 	transition: all 0.4s ease-out;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.377);
 	top: -4px;
-	background-color: rgb(162, 162, 162);
+	background-color: var(--hover-color);
 }
 
 /* Country detail styles */
 .country-detail {
 	padding: 20px;
+	color: var(--text-color);
 }
 
 /* CountryDetails */
@@ -165,26 +186,50 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: start;
-	height: 100vh;
+	overflow-y: hidden;
+	width: 100%;
+	height: calc(100vh - 40px);
 	background-color: var(--primary-background);
 }
 
 .country-details-card {
-	background-color: var(--secondary-background);
+	width: 100%;
 	color: var(--text-color);
-	border-radius: 10px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	margin-top: 60px;
+	border-radius: 5px;
+	margin: 190px 0px 0px -135px;
 	padding: 30px;
 	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-direction: row;
+
 }
 
 .flag-details {
-	width: 100%;
-	max-width: 400px;
-	height: auto;
-	border-radius: 10px;
+	width: 42%; /* Ensure the flag takes up the full width of its container */
+	height: auto; /* Set a fixed height for consistency */
+	object-fit:cover;
+	border-radius: 5px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
+	border-style: none;
+	margin-top: -20px;
+	margin-right: 80px;
+}
+
+.country-details-text {
+	text-align: left;
+	padding: 10px;
+	margin-left: 80px;
+	font-size: 15px;
+}
+
+.country-details-text h1 {
+	margin-bottom: 50px;
+}
+
+#two {
+	margin-top: 60px;
+	margin-left: 20px;
 }
 
 .country-details-loading {
@@ -197,13 +242,14 @@ p {
 	text-decoration: none;
 	font-size: 24px;
 	font-weight: 700;
-	color: var(--text-color);
+	color: var(--head-color);
+	margin-left: 45px;
 }
 
 .h2-flagApp:hover {
 	transition: all 0.2s ease-out;
 	text-decoration: underline;
-	color: var(--text-color);
+	color: var(--head-color);
 	font-size: 24.5px;
 }
 
@@ -216,29 +262,15 @@ p {
 .search-bar input {
 	padding: 10px;
 	border: none;
-	border-radius: 5px;
+	border-radius: 1px;
 	font-size: 16px;
 	background-color: var(--secondary-background);
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.092);
 	color: var(--text-color);
 	margin: 8px;
-}
-
-.search-bar button {
-	padding: 10px 20px;
-	background-color: var(--secondary-background);
-	color: var(--text-color);
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	font-size: 16px;
-	transition: background-color 0.3s ease;
-	margin: 8px;
-}
-
-.search-bar button:hover {
-	background-color: #000000;
-	color: #fff;
+	width: 500px;
+	height: 50px;
+	margin-top: 0;
 }
 
 .countries-layout {
@@ -247,15 +279,38 @@ p {
 }
 
 .countries-layout-container {
-	padding: 30px;
+	padding: 30px 0px 15px 0px;
 	display: flex;
 	justify-content: space-between;
+	margin-right: 10px;
+	margin-left: 55px;
+	margin-bottom: 0px;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 50px;
+	color: var(--text-color);
 }
 
 .nav-links img {
 	background-color: #fff;
 	border-radius: 50%;
 	width: 40px;
+	margin-right: 10px;
+}
+
+.back-button {
+	display: flex;
+	flex-direction: row;
+	margin: 50px 0 30px 50px;
+	padding: 20px;
+}
+
+.back-button p{
+	padding: 10px;
 }
 
 /* Add this media query at the end of your existing styles */
@@ -294,9 +349,17 @@ p {
 	.navbar {
 	  height: 60px;
 	}
+
+	.h2-flagApp {
+		margin-left: 0px;
+	}
+
+	.nav-links {
+		margin-right: 0px;
+	}
   
 	.logo {
-	  width: 100px;
+	  display: none;
 	}
   
 	.countries-card {
@@ -308,34 +371,84 @@ p {
 		width: 100%;
 	}
   
-	.country-details-card {
-	  padding: 15px;
-	}
-  
 	.flag-details {
-	  max-width: 300px;
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
+		margin: 0;
+	}
+
+	.countries-layout-container {
+		margin-left: 35px;
+		gap: 0;
+		padding: 0;
+		flex-direction: column;
+	}
+
+	.region-filter {
+		width: 50%;
+		margin-left: 10px;
+	}
+	.search-bar {
+		width: 95%;
+		margin-right: 5px;
 	}
   
 	.search-bar input {
-	  padding: 8px;
-	  font-size: 14px;
-	}
-  
-	.search-bar button {
-	  padding: 8px 15px;
-	  font-size: 14px;
-	}
-  
-	.countries-layout-container {
-	  flex-direction: column;
-	  align-items: center;
-	  gap: 10px;
 	  padding: 15px;
+	  font-size: 14px;
 	}
-  
+
 	.nav-links img {
 	  width: 30px;
 	  height: 30px;
+	}
+
+	.country-details-container {
+		display: flex;
+		justify-content: center;
+		align-items: start;
+		flex-direction: column;
+		height: auto;
+		background-color: var(--primary-background);
+	}
+
+	.country-details-card {
+		padding: 0px;
+		background-color: var(--primary-background);
+		color: var(--text-color);
+		border-radius: 10px;
+		margin: 0px 0px 0px 20px;
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+	  }
+
+	  .country-details-text {
+		margin: 0;
+	  }
+
+	  .country-details-text h1{
+		margin: 10px 0 0 0;
+	  }
+
+	  #two {
+		margin: -40px 0 0 0;
+	  }
+
+	.back-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		margin: 0;
+		padding: 20px;
+
+	}
+	
+	.back-button p{
+		padding: 10px;
 	}
   }
   

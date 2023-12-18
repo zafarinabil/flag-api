@@ -15,7 +15,9 @@ const Countries = ({ filteredCountries, loading, handleCountryClick }) => {
 						<img src={country.flags.svg} alt={`Flag of ${country.name.common}`} className="flag" />
 						<div className="country-detail">
 							<h2>{country.name.common}</h2>
+							<p>Population: {country.population}</p>
 							<p>Region: {country.region}</p>
+							<p>Capital : {country.capital}</p>
 						</div>
 					</div>
 				))

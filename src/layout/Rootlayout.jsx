@@ -31,14 +31,14 @@ const RootLayout = () => {
 						Countries
 					</NavLink>
 					<img className="logo" src={isDarkTheme ? logoDark : logoLight} alt="Techover" />
-					<div className="nav-links">
+					<div className="nav-links" onClick={toggleTheme}>
 						{/* Replace the button with an img for the theme toggle */}
 						<img
 							src={themeToggleSvg}
 							alt="Toggle Theme"
 							className="theme-toggle"
-							onClick={toggleTheme}
 						/>
+						<p>Dark mode</p>
 					</div>
 				</nav>
 			</header>
