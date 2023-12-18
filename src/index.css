@@ -1,4 +1,4 @@
-/* styles.css */
+/* index.css */
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
@@ -23,8 +23,8 @@
 
 /* Dark theme styles */
 .root-layout.dark-theme {
-	--primary-background: #202C36;
-	--secondary-background: #2B3844;
+	--primary-background: #202c36;
+	--secondary-background: #2b3844;
 	--text-color: #cbcbcb;
 	--head-color: #fff5f5;
 	--box-shadow: rgba(0, 0, 0, 0.1);
@@ -52,7 +52,9 @@ main {
 	padding: 0;
 	margin: 0;
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	color: var(--head-color);
 }
 
@@ -140,12 +142,11 @@ p {
 .flag {
 	width: 100%; /* Ensure the flag takes up the full width of its container */
 	height: 50%; /* Set a fixed height for consistency */
-	object-fit:cover; /* Maintain aspect ratio and cover the container */
+	object-fit: cover; /* Maintain aspect ratio and cover the container */
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-style: none;
-  }
-  
+}
 
 /* Countries container styles */
 .countries {
@@ -166,13 +167,14 @@ p {
 	padding: 0px;
 	border-radius: 5px;
 	box-shadow: var(--box-shadow);
-  }
+}
 
 .countries-card:hover {
 	transition: all 0.4s ease-out;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.377);
 	top: -4px;
 	background-color: var(--hover-color);
+	cursor: pointer;
 }
 
 /* Country detail styles */
@@ -202,13 +204,12 @@ p {
 	display: flex;
 	flex-direction: column;
 	flex-direction: row;
-
 }
 
 .flag-details {
 	width: 42%; /* Ensure the flag takes up the full width of its container */
 	height: auto; /* Set a fixed height for consistency */
-	object-fit:cover;
+	object-fit: cover;
 	border-radius: 5px;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
 	border-style: none;
@@ -292,12 +293,18 @@ p {
 	justify-content: center;
 	align-items: center;
 	margin-right: 50px;
-	color: var(--text-color);
+	color: var(--head-color);
+	font-size: 16px;
+}
+
+.nav-links :hover {
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	text-decoration: underline;
+	color: var(--head-color);
 }
 
 .nav-links img {
-	background-color: #fff;
-	border-radius: 50%;
 	width: 40px;
 	margin-right: 10px;
 }
@@ -309,45 +316,51 @@ p {
 	padding: 20px;
 }
 
-.back-button p{
+.back-button :hover {
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	text-decoration: underline;}
+
+.back-button p {
 	padding: 10px;
+	color: var(--head-color);
 }
 
 /* Add this media query at the end of your existing styles */
 
 @media only screen and (max-width: 767px) {
 	/* Mobile-specific styles */
-  
+
 	:root {
-	  --primary-background: #f5f5f5;
-	  --secondary-background: #ffffff;
-	  --text-color: #333333;
-	  --accent-color: #2196f3;
-	  --box-shadow: rgba(0, 0, 0, 0.1);
+		--primary-background: #f5f5f5;
+		--secondary-background: #ffffff;
+		--text-color: #333333;
+		--accent-color: #2196f3;
+		--box-shadow: rgba(0, 0, 0, 0.1);
 	}
-  
+
 	.root-layout.light-theme {
-	  --primary-background: #f5f5f5;
-	  --secondary-background: #ffffff;
-	  --text-color: #333333;
-	  --accent-color: #2196f3;
-	  --box-shadow: rgba(0, 0, 0, 0.1);
+		--primary-background: #f5f5f5;
+		--secondary-background: #ffffff;
+		--text-color: #333333;
+		--accent-color: #2196f3;
+		--box-shadow: rgba(0, 0, 0, 0.1);
 	}
-  
+
 	.root-layout.dark-theme {
-	  --primary-background: #1f1f1f;
-	  --secondary-background: #2c2c2c;
-	  --text-color: #ffffff;
-	  --accent-color: #2196f3;
-	  --box-shadow: rgba(255, 255, 255, 0.1);
+		--primary-background: #1f1f1f;
+		--secondary-background: #2c2c2c;
+		--text-color: #ffffff;
+		--accent-color: #2196f3;
+		--box-shadow: rgba(255, 255, 255, 0.1);
 	}
-  
+
 	body {
-	  font-size: 14px;
+		font-size: 14px;
 	}
-  
+
 	.navbar {
-	  height: 60px;
+		height: 60px;
 	}
 
 	.h2-flagApp {
@@ -357,20 +370,20 @@ p {
 	.nav-links {
 		margin-right: 0px;
 	}
-  
+
 	.logo {
-	  display: none;
+		display: none;
 	}
-  
+
 	.countries-card {
-	  width: 80%;
-	  margin: 20px;
+		width: 80%;
+		margin: 20px;
 	}
 
 	.countries-card img {
 		width: 100%;
 	}
-  
+
 	.flag-details {
 		width: 100%;
 		height: auto;
@@ -394,15 +407,15 @@ p {
 		width: 95%;
 		margin-right: 5px;
 	}
-  
+
 	.search-bar input {
-	  padding: 15px;
-	  font-size: 14px;
+		padding: 15px;
+		font-size: 14px;
 	}
 
 	.nav-links img {
-	  width: 30px;
-	  height: 30px;
+		width: 30px;
+		height: 30px;
 	}
 
 	.country-details-container {
@@ -423,19 +436,19 @@ p {
 		display: flex;
 		flex-direction: column;
 		width: 80%;
-	  }
+	}
 
-	  .country-details-text {
+	.country-details-text {
 		margin: 0;
-	  }
+	}
 
-	  .country-details-text h1{
+	.country-details-text h1 {
 		margin: 10px 0 0 0;
-	  }
+	}
 
-	  #two {
+	#two {
 		margin: -40px 0 0 0;
-	  }
+	}
 
 	.back-button {
 		display: flex;
@@ -444,11 +457,9 @@ p {
 		flex-direction: row;
 		margin: 0;
 		padding: 20px;
-
 	}
-	
-	.back-button p{
+
+	.back-button p {
 		padding: 10px;
 	}
-  }
-  
+}
