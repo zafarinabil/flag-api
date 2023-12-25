@@ -459,7 +459,7 @@ p {
 		justify-content: start;
 		align-items: start;
 		flex-direction: column;
-		height: 85vh;
+		min-height: 85vh;
 		background-color: var(--primary-background);
 		padding: 0;
 	}
