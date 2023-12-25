@@ -6,48 +6,56 @@ import logoDark from '../assets/logo-dark.png';
 import themeToggleSvg from '../assets/moon-bordered.svg';
 
 const RootLayout = () => {
-	const [selectedRegion, setSelectedRegion] = useState('');
-	const [themeText, setThemeText] = useState('Dark Mode'); // State for theme text
-	const navigate = useNavigate();
-	const { isDarkTheme, toggleTheme } = useTheme();
+  const [selectedRegion, setSelectedRegion] = useState('');
+  const [themeText, setThemeText] = useState('Dark Mode'); // State for theme text
+  const navigate = useNavigate();
+  const { isDarkTheme, toggleTheme } = useTheme();
 
-	const handleRegionChange = (region) => {
-		setSelectedRegion(region);
-	};
+  const handleRegionChange = (region) => {
+    setSelectedRegion(region);
+  };
 
-	useEffect(() => {
-		// Update the URL when the selected region changes
-		navigate(selectedRegion ? `/region/${selectedRegion}` : '/');
-	}, [selectedRegion, navigate]);
+  useEffect(() => {
+    // Update the URL when the selected region changes
+    navigate(selectedRegion ? `/region/${selectedRegion}` : '/');
+  }, [selectedRegion, navigate]);
 
-	const location = useLocation();
-	const regionFromURL = location.pathname.split('/')[2];
+  const location = useLocation();
+  const regionFromURL = location.pathname.split('/')[2];
 
-	const handleThemeToggle = () => {
-		toggleTheme();
-		// Update theme text based on the current theme
-		setThemeText(isDarkTheme ? 'Dark Mode' : 'Light Mode');
-	};
+  const handleThemeToggle = () => {
+    toggleTheme();
+    // Update theme text based on the current theme
+    setThemeText(isDarkTheme ? 'Dark Mode' : 'Light Mode');
+  };
 
-	return (
-		<div className={`root-layout ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
-			<header>
-				<nav className="navbar">
-					<NavLink className="h2-flagApp" to="/">
-						The Flag App
-					</NavLink>
-					<img className="logo" src={isDarkTheme ? logoDark : logoLight} alt="Techover" />
-					<div className="nav-links" onClick={handleThemeToggle}>
-						<img src={themeToggleSvg} alt="Toggle Theme" className="theme-toggle" />
-						<p>{themeText}</p>
-					</div>
-				</nav>
-			</header>
-			<main>
-				<Outlet selectedRegion={selectedRegion} />
-			</main>
-		</div>
-	);
+  return (
+    <div className={`root-layout ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
+      <header>
+        <nav>
+          <div className='nav'>
+            <div className="navbar">
+              <NavLink className="h2-flagApp" to="/">
+                The Flag App
+              </NavLink>
+              <img className="logo" src={isDarkTheme ? logoDark : logoLight} alt="Techover" />
+              <div className="nav-links" onClick={handleThemeToggle}>
+                <img src={themeToggleSvg} alt="Toggle Theme" className="theme-toggle" />
+                <p>{themeText}</p>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <Outlet selectedRegion={selectedRegion} />
+      </main>
+      {/* Footer section */}
+      <footer className="footer">
+        <p>&copy; 2023 The Flag App. All rights reserved.</p>
+      </footer>
+    </div>
+  );
 };
 
 export default RootLayout;

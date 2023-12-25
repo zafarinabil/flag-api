@@ -40,7 +40,7 @@ const CountryDetails = () => {
   };
 
   return (
-    <div className={`country-details-container ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
+    <div className={`country-details-container ${isDarkTheme ? 'dark-theme' : 'light-theme'}`} style={{ overflowY: 'hidden' }}>
       <div onClick={handleGoToIndex} className="back-button">
         {/* Conditionally render the arrow icon based on the theme */}
         <img src={isDarkTheme ? arrowLeft : arrowLeftDark} alt="Back" />
