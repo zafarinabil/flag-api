@@ -52,7 +52,7 @@ const RootLayout = () => {
       </main>
       {/* Footer section */}
       <footer className="footer">
-        <p>&copy; 2023 The Flag App. All rights reserved.</p>
+        <p>Nabil Zafari &copy; 2023 The Flag App. All rights reserved.</p>
       </footer>
     </div>
   );
