@@ -2,14 +2,6 @@
 /* Import fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300&family=Outfit:wght@300&family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
 
-:root {
-	--primary-background: #f5f5f5;
-	--secondary-background: #ffffff;
-	--text-color: #333333;
-	--box-shadow: rgba(0, 0, 0, 0.1);
-	font-family: 'Montserrat', sans-serif;
-}
-
 /* Light theme styles */
 .root-layout.light-theme {
 	--primary-background: #f5f5f5;
@@ -18,6 +10,7 @@
 	--head-color: #3d3d3d;
 	--box-shadow: rgba(0, 0, 0, 0.1);
 	--hover-color: #dbdbdb;
+	background-color: var(--primary-background);
 }
 
 /* Dark theme styles */
@@ -29,6 +22,7 @@
 	--accent-color: #2196f3;
 	--box-shadow: rgba(255, 255, 255, 0.1);
 	--hover-color: #202c36;
+	background-color: var(--primary-background);
 }
 
 /* Reset styles for all elements */
@@ -42,7 +36,7 @@
 .App {
 	font-family: 'Poppins', sans-serif;
 	background-color: var(--primary-background);
-	max-width: 100%;
+	width: 100vw;
 	margin-top: 80px;
 }
 
@@ -110,15 +104,14 @@ p {
 
 /* Navbar styles */
 .nav {
-	background-color: black;
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	max-width: 100%;
-	margin: 0 auto;
-	box-shadow: 0 4px 8px var(--box-shadow);
-
+	position: fixed;
+	top: 0;
+	height: 80px;
+	background-color: var(--secondary-background);
 }
 
 .navbar {
@@ -147,6 +140,7 @@ p {
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-style: none;
+	border-radius: 10px;
 }
 
 main {
@@ -230,7 +224,6 @@ main {
 	height: auto; /* Set a fixed height for consistency */
 	object-fit: cover;
 	border-radius: 5px;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
 	border-style: none;
 	margin-top: -20px;
 	margin-right: 80px;
@@ -356,7 +349,6 @@ main {
 	margin: 5px; /* Add margin for spacing between buttons */
 	text-decoration: none; /* Remove underline from text */
 	font-size: 14px;
-	box-shadow: 0 4px 8px var(--box-shadow);
 }
 
 .border-button:hover {
@@ -406,17 +398,27 @@ body::-webkit-scrollbar-thumb:hover {
 		font-size: 14px;
 		background-color: black;
 	}
-
-	.navbar {
+	.nav {
 		height: 60px;
 	}
 
+	.navbar {
+		height: 60px;
+		width: 100%;
+		overflow-y: hidden;
+		background-color: #1f1f1f1b;
+	}
+
 	.h2-flagApp {
-		margin-left: 0px;
+		margin-left: 0;
+		/* margin-left: 18px; if need to align all items*/ 
+		font-size: 18px;
+		font-weight: 700;
 	}
 
 	.nav-links {
-		margin-right: 0px;
+		margin-right: 0;
+		/* margin-right: 20px; if need to align all items*/
 	}
 
 	.logo {
@@ -433,16 +435,16 @@ body::-webkit-scrollbar-thumb:hover {
 	}
 
 	.flag-details {
-		width: 110%;
+		width: 100%;
 		height: auto;
 		border-radius: 10px;
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.377);
-		margin: 0;
+		margin: auto 0;
 	}
 
 	.countries {
 		margin: 0;
 		min-height: 70vh;
+		width: 100%;
 	}
 
 	.countries-layout {
@@ -450,7 +452,7 @@ body::-webkit-scrollbar-thumb:hover {
 	}
 
 	.countries-layout-container {
-		margin-left: 35px;
+		margin-left: 30px;
 		padding-top: 240px;
 		gap: 0;
 		padding: 0;
@@ -458,12 +460,11 @@ body::-webkit-scrollbar-thumb:hover {
 	}
 
 	.region-filter {
-		width: 50%;
-		margin-left: 10px;
+		width: 87%;
+		margin-left: 8px;
 	}
 	.search-bar {
-		width: 90%;
-		margin-right: 5px;
+		width: 91%;
 	}
 
 	.search-bar input {
@@ -489,6 +490,8 @@ body::-webkit-scrollbar-thumb:hover {
 		background-color: var(--primary-background);
 		padding: 0;
 		overflow-y: hidden;
+		margin-left: 0;
+		margin-right: -35px;
 	}
 
 	.country-details-card {
