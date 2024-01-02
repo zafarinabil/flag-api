@@ -117,20 +117,20 @@ p {
 	justify-content: center;
 	max-width: 100%;
 	margin: 0 auto;
+	box-shadow: 0 4px 8px var(--box-shadow);
+
 }
 
 .navbar {
 	position: fixed;
 	top: 0;
-	left: 0;
-	width: 100vw;
+	width: 1440px;
 	height: 80px;
 	background-color: var(--secondary-background);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 20px;
-	box-shadow: 0 4px 8px var(--box-shadow);
 }
 
 /* Logo styles */
@@ -149,6 +149,12 @@ p {
 	border-style: none;
 }
 
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* Countries container styles */
 .countries {
 	display: flex;
@@ -156,7 +162,8 @@ p {
 	align-items: center;
 	flex-wrap: wrap;
 	min-height: 72vh;
-	margin: 0 150px 0 150px;
+	margin: 0;
+	width: 1440px;
 }
 
 /* Country card styles */
@@ -194,8 +201,7 @@ p {
 	overflow-y: hidden;
 	min-height: 83vh;
 	background-color: var(--primary-background);
-	padding-right: 215px;
-	padding-left: 215px;
+	width: 1440px;
 }
 
 .country-details-card {
@@ -257,7 +263,7 @@ p {
 	font-size: 24px;
 	font-weight: 700;
 	color: var(--head-color);
-	margin-left: 272px;
+	margin-left: 40px;
 }
 
 .h2-flagApp:hover {
@@ -305,7 +311,7 @@ p {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: 280px;
+	margin-right: 40px;
 	color: var(--head-color);
 	font-size: 20px;
 }
@@ -456,7 +462,7 @@ body::-webkit-scrollbar-thumb:hover {
 		margin-left: 10px;
 	}
 	.search-bar {
-		width: 95%;
+		width: 90%;
 		margin-right: 5px;
 	}
 
