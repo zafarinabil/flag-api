@@ -1,0 +1,29 @@
+/* Search bar styles */
+.search-bar {
+	display: flex;
+	align-items: center;
+}
+
+.search-bar input {
+	padding: 10px;
+	border: none;
+	border-radius: 1px;
+	font-size: 16px;
+	background-color: var(--secondary-background);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.092);
+	color: var(--text-color);
+	margin: 8px;
+	width: 500px;
+	height: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+	.search-bar {
+		width: 91%;
+	}
+
+	.search-bar input {
+		padding: 15px;
+		font-size: 14px;
+	}
+}

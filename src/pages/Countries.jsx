@@ -1,8 +1,7 @@
-// Countries.js (without search functionality)
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import './Countries.css';
 
 const Countries = ({ filteredCountries, loading, handleCountryClick }) => {
 	return (

@@ -1,0 +1,70 @@
+/* Countries.css */
+/* Countries container */
+.countries {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: wrap;
+	min-height: 72vh;
+	margin: 0;
+	width: 1440px;
+}
+
+/* Country card */
+.countries-card {
+	width: 300px;
+	height: 420px;
+	background-color: var(--secondary-background);
+	color: var(--text-color);
+	margin: 20px;
+	padding: 0;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.countries-card:hover {
+	transition: all 0.4s ease-out;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.377);
+	top: -4px;
+	background-color: var(--hover-color);
+	cursor: pointer;
+}
+
+/* Flag styles */
+.flag {
+	width: 100%; /* Ensure the flag takes up the full width of its container */
+	height: 50%; /* Set a fixed height for consistency */
+	object-fit: cover; /* Maintain aspect ratio and cover the container */
+	border-radius: 10px;
+	border-style: none;
+}
+
+.country-detail {
+	padding: 20px;
+	text-align: left;
+}
+
+h2 {
+	margin-bottom: 10px;
+}
+
+p {
+	margin: 8px 0;
+}
+
+@media only screen and (max-width: 767px) {
+	.countries {
+		margin: 0;
+		min-height: 70vh;
+		width: 100%;
+	}
+
+	.countries-card {
+		width: 80%;
+		margin: 20px;
+	}
+
+	.countries-card img {
+		width: 100%;
+	}
+}

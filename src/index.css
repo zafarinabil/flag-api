@@ -1,6 +1,6 @@
 /* index.css */
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,800;1,300&family=Outfit:wght@300&family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@300&family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
 
 /* Light theme styles */
 .root-layout.light-theme {
@@ -34,7 +34,7 @@
 }
 
 .App {
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	background-color: var(--primary-background);
 	width: 100vw;
 	margin-top: 80px;
@@ -132,123 +132,10 @@ p {
 	object-fit: contain;
 }
 
-/* Flag styles */
-.flag {
-	width: 100%; /* Ensure the flag takes up the full width of its container */
-	height: 50%; /* Set a fixed height for consistency */
-	object-fit: cover; /* Maintain aspect ratio and cover the container */
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	border-style: none;
-	border-radius: 10px;
-}
-
 main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
-/* Countries container styles */
-.countries {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	min-height: 72vh;
-	margin: 0;
-	width: 1440px;
-}
-
-/* Country card styles */
-.countries-card {
-	width: 300px;
-	height: 450px; /* Set a fixed height for consistency */
-	background-color: var(--secondary-background);
-	color: var(--text-color);
-	margin: 20px;
-	padding: 0px;
-	border-radius: 5px;
-	box-shadow: var(--box-shadow);
-}
-
-.countries-card:hover {
-	transition: all 0.4s ease-out;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.377);
-	top: -4px;
-	background-color: var(--hover-color);
-	cursor: pointer;
-}
-
-/* Country detail styles */
-.country-detail {
-	padding: 20px;
-	color: var(--text-color);
-}
-
-/* CountryDetails */
-.country-details-container {
-	display: flex;
-	justify-content: center;
-	align-items: start;
-	flex-direction: column;
-	overflow-y: hidden;
-	min-height: 83vh;
-	background-color: var(--primary-background);
-	width: 1440px;
-}
-
-.country-details-card {
-	width: 100%;
-	color: var(--text-color);
-	border-radius: 5px;
-	margin: -30px 0px 0px 35px;
-	padding: 30px;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	flex-direction: row;
-}
-
-.border {
-	position: relative;
-	display: flex;
-	width: 40%;
-	margin-left: 830px;
-	top: -70px;
-	color: var(--text-color);
-}
-
-.flag-details {
-	width: 42%; /* Ensure the flag takes up the full width of its container */
-	height: auto; /* Set a fixed height for consistency */
-	object-fit: cover;
-	border-radius: 5px;
-	border-style: none;
-	margin-top: -20px;
-	margin-right: 80px;
-}
-
-.country-details-text {
-	text-align: left;
-	padding: 10px;
-	margin-left: 80px;
-	font-size: 15px;
-}
-
-.country-details-text h1 {
-	margin-bottom: 50px;
-}
-
-#two {
-	margin-top: 60px;
-	margin-left: 20px;
-}
-
-.country-details-loading {
-	font-size: 18px;
-	font-weight: bold;
-	color: var(--text-color);
 }
 
 .h2-flagApp {
@@ -263,25 +150,6 @@ main {
 	transition: all 0.2s ease-out;
 	text-decoration: underline;
 	color: var(--head-color);
-}
-
-/* Search bar styles */
-.search-bar {
-	display: flex;
-	align-items: center;
-}
-
-.search-bar input {
-	padding: 10px;
-	border: none;
-	border-radius: 1px;
-	font-size: 16px;
-	background-color: var(--secondary-background);
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.092);
-	color: var(--text-color);
-	margin: 8px;
-	width: 500px;
-	height: 50px;
 }
 
 .countries-layout {
@@ -321,23 +189,7 @@ main {
 	margin-right: 10px;
 }
 
-.back-button {
-	display: flex;
-	flex-direction: row;
-	margin: -20px 0 10px 50px;
-	padding: 20px;
-}
 
-.back-button :hover {
-	cursor: pointer;
-	transition: all 0.2s ease-out;
-	text-decoration: underline;
-}
-
-.back-button p {
-	padding: 10px;
-	color: var(--head-color);
-}
 
 .border-button {
 	background-color: var(--secondary-background); /* Green background color */
@@ -411,7 +263,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 	.h2-flagApp {
 		margin-left: 0;
-		/* margin-left: 18px; if need to align all items*/ 
+		/* margin-left: 18px; if need to align all items*/
 		font-size: 18px;
 		font-weight: 700;
 	}
@@ -425,26 +277,11 @@ body::-webkit-scrollbar-thumb:hover {
 		display: none;
 	}
 
-	.countries-card {
-		width: 80%;
-		margin: 20px;
-	}
-
-	.countries-card img {
-		width: 100%;
-	}
-
 	.flag-details {
 		width: 100%;
 		height: auto;
 		border-radius: 10px;
 		margin: auto 0;
-	}
-
-	.countries {
-		margin: 0;
-		min-height: 70vh;
-		width: 100%;
 	}
 
 	.countries-layout {
@@ -463,14 +300,6 @@ body::-webkit-scrollbar-thumb:hover {
 		width: 87%;
 		margin-left: 8px;
 	}
-	.search-bar {
-		width: 91%;
-	}
-
-	.search-bar input {
-		padding: 15px;
-		font-size: 14px;
-	}
 
 	.nav-links {
 		font-size: 16px;
@@ -479,61 +308,5 @@ body::-webkit-scrollbar-thumb:hover {
 	.nav-links img {
 		width: 30px;
 		height: 30px;
-	}
-
-	.country-details-container {
-		display: flex;
-		justify-content: start;
-		align-items: start;
-		flex-direction: column;
-		min-height: 85vh;
-		background-color: var(--primary-background);
-		padding: 0;
-		overflow-y: hidden;
-		margin-left: 0;
-		margin-right: -35px;
-	}
-
-	.country-details-card {
-		padding: 0px;
-		background-color: var(--primary-background);
-		color: var(--text-color);
-		border-radius: 10px;
-		margin: 0px 0px 0px 20px;
-		display: flex;
-		flex-direction: column;
-		width: 80%;
-	}
-
-	.country-details-text {
-		margin: 0;
-	}
-
-	.country-details-text h1 {
-		margin: 10px 0 0 0;
-	}
-
-	#two {
-		margin: -40px 0 0 0;
-	}
-
-	.back-button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: row;
-		margin: 0;
-		padding: 20px;
-	}
-
-	.back-button p {
-		padding: 10px;
-		width: 80%;
-	}
-
-	.border {
-		width: 90%;
-		margin-left: 30px;
-		top: -50px;
 	}
 }

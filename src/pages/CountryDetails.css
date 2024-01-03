@@ -1,0 +1,141 @@
+/* CountryDetails.css */
+.country-details-container {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	flex-direction: column;
+	overflow-y: hidden;
+	min-height: 83vh;
+	background-color: var(--primary-background);
+	width: 1440px;
+}
+
+.country-details-card {
+	width: 100%;
+	color: var(--text-color);
+	border-radius: 5px;
+	margin: -30px 0px 0px 35px;
+	padding: 30px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-direction: row;
+}
+
+.border {
+	position: relative;
+	display: flex;
+	width: 40%;
+	margin-left: 815px;
+	top: -70px;
+	color: var(--text-color);
+}
+
+.flag-details {
+	width: 42%; /* Ensure the flag takes up the full width of its container */
+	height: auto; /* Set a fixed height for consistency */
+	max-height: 400px;
+	object-fit: cover;
+	border-radius: 5px;
+	border-style: none;
+	margin-top: -20px;
+	margin-right: 80px;
+}
+
+.country-details-text {
+	text-align: left;
+	padding: 10px;
+	margin-left: 80px;
+	font-size: 15px;
+}
+
+.country-details-text h1 {
+	margin-bottom: 50px;
+}
+
+#two {
+	margin-top: 60px;
+	margin-left: 20px;
+}
+
+.back-button {
+	display: flex;
+	flex-direction: row;
+	margin: -20px 0 10px 50px;
+	padding: 20px;
+}
+
+.back-button :hover {
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	text-decoration: underline;
+}
+
+.back-button p {
+	padding: 10px;
+	color: var(--head-color);
+}
+
+.country-details-loading {
+	font-size: 18px;
+	font-weight: bold;
+	color: var(--text-color);
+}
+
+@media only screen and (max-width: 767px) {
+	.country-details-container {
+		display: flex;
+		justify-content: start;
+		align-items: start;
+		flex-direction: column;
+		min-height: 85vh;
+		background-color: var(--primary-background);
+		padding: 0;
+		overflow-y: hidden;
+		margin-left: 0;
+		margin-right: -45px;
+	}
+
+	.country-details-card {
+		padding: 0px;
+		background-color: var(--primary-background);
+		color: var(--text-color);
+		border-radius: 10px;
+		margin: 0px 0px 0px 20px;
+		display: flex;
+		flex-direction: column;
+		width: 80%;
+	}
+
+	.country-details-text {
+		margin: 0;
+	}
+
+	.country-details-text h1 {
+		margin: 10px 0 0 0;
+	}
+
+	#two {
+		margin: -40px 0 0 0;
+	}
+
+	.back-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		margin: -20px 0 10px 10px;
+		padding: 20px;
+	}
+
+	.back-button p {
+		padding: 10px;
+		width: 80%;
+	}
+
+	.border {
+		width: 80%;
+		margin-left: 30px;
+		top: -50px;
+	}
+}

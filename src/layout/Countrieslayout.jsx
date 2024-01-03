@@ -60,8 +60,7 @@ const CountriesLayout = () => {
 			<div className="countries-layout-container">
 				<SearchBar onSearch={handleSearch} />
 				<div className="region-filter">
-					<label htmlFor="region" className="filter-label">
-					</label>
+					<label htmlFor="region" className="filter-label"></label>
 					<select
 						id="region"
 						value={selectedRegion || regionFromURL}
