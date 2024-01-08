@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet, NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useTheme } from '../pages/ThemeContext';
+import Navbar from '../pages/Navbar';
 import logoLight from '../assets/logo-light.png';
 import logoDark from '../assets/logo-dark.png';
 import themeToggleSvg from '../assets/moon-bordered.svg';
@@ -32,20 +33,13 @@ const RootLayout = () => {
   return (
     <div className={`root-layout ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
       <header>
-        <nav>
-          <div className='nav'>
-            <div className="navbar">
-              <NavLink className="h2-flagApp" to="/">
-                The Flag App
-              </NavLink>
-              <img className="logo" src={isDarkTheme ? logoDark : logoLight} alt="Techover" />
-              <div className="nav-links" onClick={handleThemeToggle}>
-                <img src={themeToggleSvg} alt="Toggle Theme" className="theme-toggle" />
-                <p>{themeText}</p>
-              </div>
-            </div>
-          </div>
-        </nav>
+        <Navbar
+          isDarkTheme={isDarkTheme}
+          handleThemeToggle={handleThemeToggle}
+          themeText={themeText}
+          logoSrc={isDarkTheme ? logoDark : logoLight}
+          themeToggleSvg={themeToggleSvg}
+        />
       </header>
       <main>
         <Outlet selectedRegion={selectedRegion} />
