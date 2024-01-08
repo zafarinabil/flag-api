@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
+import './SearchBar.css';
 
-import './SearchBar.css'
 const SearchBar = ({ onSearch, onClear }) => {
   const [searchQuery, setSearchQuery] = useState('');
 
   const handleInputChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      onSearch(searchQuery);
-    }
+    const query = e.target.value;
+    setSearchQuery(query);
+    onSearch(query); // Invoke onSearch whenever the input changes
   };
 
   const handleClear = () => {
@@ -26,7 +22,6 @@ const SearchBar = ({ onSearch, onClear }) => {
         placeholder="Search for a Country"
         value={searchQuery}
         onChange={handleInputChange}
-        onKeyDown={handleKeyDown}
       />
     </div>
   );
