@@ -33,7 +33,6 @@
 .country-details-flag {
 	width: 500px; /* Ensure the flag takes up the full width of its container */
 	height: 300px; /* Set a fixed height for consistency */
-	object-fit: contain;
 	border-radius: 5px;
 	border-style: none;
 	margin-top: -20px;
@@ -43,7 +42,7 @@
 .flag-details {
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .country-details-text {
