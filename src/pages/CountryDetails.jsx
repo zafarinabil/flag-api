@@ -70,7 +70,9 @@ const CountryDetails = () => {
 				<p> Back</p>
 			</div>
 			<div className="country-details-card">
+				<div className='country-details-flag'>
 				<img src={country.flags.svg} alt={`Flag of ${country.name.common}`} className="flag-details" />
+				</div>
 				<div className="country-details-text">
 					<h1>{country.name.common}</h1>
 					<p>
