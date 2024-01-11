@@ -13,7 +13,7 @@
 /* Country card */
 .countries-card {
 	width: 300px;
-	height: 480px;
+	height: 410px;
 	background-color: var(--secondary-background);
 	color: var(--text-color);
 	margin: 20px;
@@ -30,26 +30,35 @@
 	cursor: pointer;
 }
 
+.countries-card-frame {
+	height: 12rem;
+	overflow: hidden;
+	border-radius: 5px 5px 0 0;
+}
+
 /* Flag styles */
 .flag {
 	width: 100%; /* Ensure the flag takes up the full width of its container */
-	height: 50%; /* Set a fixed height for consistency */
+	height: 50%;
 	object-fit: cover; /* Maintain aspect ratio and cover the container */
-	border-radius: 10px;
 	border-style: none;
 }
 
 .country-detail {
-	padding: 20px;
-	text-align: left;
+	padding: 10px 30px 0 30px;
+	text-align: center;
+
 }
 
-h2 {
-	margin-bottom: 10px;
+.country-detail h2 {
+	margin: 20px 0 20px 0;
+	font-size: 19px;
 }
 
-p {
-	margin: 8px 0;
+.country-detail p {
+	font-size: 14px;
+	line-height: 1.2;
+	margin: 6px;
 }
 
 @media only screen and (max-width: 767px) {
