@@ -127,6 +127,7 @@
 
 	.country-details-text {
 		margin: 0;
+		overflow: hidden;
 	}
 
 	.country-details-text h1 {
