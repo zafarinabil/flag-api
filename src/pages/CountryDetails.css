@@ -110,6 +110,21 @@
 		width: 80%;
 	}
 
+	.country-details-flag {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		margin: auto 0;
+
+	}
+
+	/* .flag-details {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		margin: auto 0;
+	} */
+
 	.country-details-text {
 		margin: 0;
 	}
