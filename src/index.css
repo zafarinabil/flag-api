@@ -8,8 +8,8 @@
 	--secondary-background: #ffffff;
 	--text-color: #4f4f4f;
 	--head-color: #3d3d3d;
-	--box-shadow: rgba(0, 0, 0, 0.1);
-	--hover-color: #dbdbdb;
+	--box-shadow: rgba(0, 0, 0, 0.282);
+	--hover-color: #e8e8e8;
 	background-color: var(--primary-background);
 }
 
@@ -21,7 +21,7 @@
 	--head-color: #f2f2f2;
 	--accent-color: #2196f3;
 	--box-shadow: rgba(255, 255, 255, 0.1);
-	--hover-color: #202c36;
+	--hover-color: #5a656e87;
 	background-color: var(--primary-background);
 }
 
@@ -31,178 +31,21 @@
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
+	color: var(--text-color);
+}
+
+main {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
 }
 
 .App {
 	font-family: 'Open Sans', sans-serif;
 	background-color: var(--primary-background);
-	width: 100vw;
-	margin-top: 80px;
-}
-
-main {
-	padding: 0;
-	margin: 0;
-}
-h1,
-h2,
-h3 {
-	color: var(--head-color);
-}
-
-/* Basic styling for the filter container */
-.region-filter {
-	display: flex;
-	align-items: center;
-	margin-bottom: 20px;
-	margin-right: 40px;
-}
-
-/* Label styling */
-.filter-label {
-	display: block;
-	font-size: 16px;
-	margin-bottom: 8px;
-	color: var(--text-color);
-}
-
-/* Dropdown styling */
-.custom-dropdown {
-	width: 100%;
-	padding: 10px;
-	font-size: 14px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	background-color: var(--secondary-background);
-	color: var(--head-color);
-	cursor: pointer;
-	transition: border-color 0.3s ease;
-	height: 50px;
-}
-
-/* Style the default option differently */
-.default-option {
-	font-style: italic;
-	color: #888;
-}
-
-/* Style the selected option for better visibility */
-.custom-dropdown option:checked {
-	background-color: #f0f0f0;
-}
-
-/* Hover effect on the dropdown */
-.custom-dropdown:hover {
-	border-color: #666;
-}
-
-/* Paragraph styles */
-p {
-	margin: 20px 0;
-	line-height: 1.5;
-}
-
-/* Navbar styles */
-.nav {
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	top: 0;
-	height: 80px;
-	background-color: var(--secondary-background);
-}
-
-.navbar {
-	position: fixed;
-	top: 0;
-	width: 1440px;
-	height: 80px;
-	background-color: var(--secondary-background);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
-}
-
-/* Logo styles */
-.logo {
-	width: 180px;
-	object-fit: contain;
-}
-
-main {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.h2-flagApp {
-	text-decoration: none;
-	font-size: 24px;
-	font-weight: 700;
-	color: var(--head-color);
-	margin-left: 40px;
-}
-
-.h2-flagApp:hover {
-	transition: all 0.2s ease-out;
-	text-decoration: underline;
-	color: var(--head-color);
-}
-
-.countries-layout {
-	background-color: var(--primary-background);
-	height: auto;
-}
-
-.countries-layout-container {
-	padding: 30px 0px 15px 30px;
-	display: flex;
-	justify-content: space-between;
-	margin-right: 10px;
-	margin-left: 55px;
-	margin-bottom: 0px;
-	max-width: 1400px;
-	margin: 0 auto;
-}
-
-.nav-links {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 40px;
-	color: var(--head-color);
-	font-size: 20px;
-}
-
-.nav-links :hover {
-	cursor: pointer;
-	transition: all 0.2s ease-out;
-	text-decoration: underline;
-	color: var(--head-color);
-}
-
-.nav-links img {
-	width: 30px;
-	margin-right: 10px;
-}
-
-.border-button {
-	background-color: var(--secondary-background); /* Green background color */
-	color: var(--text-color);
-	padding: 10px 20px; /* Add padding for better appearance */
-	border: none;
-	border-radius: 5px; /* Optional: add rounded corners */
-	cursor: pointer;
-	margin: 5px; /* Add margin for spacing between buttons */
-	text-decoration: none; /* Remove underline from text */
-	font-size: 14px;
-}
-
-.border-button:hover {
-	background-color: var(--hover-color); /* Darker green color on hover */
 }
 
 .footer {
@@ -214,90 +57,8 @@ main {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-}
-
-/* For WebKit browsers (Chrome, Safari) */
-body::-webkit-scrollbar {
-	width: 0px; /* Set a width for the scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-	background-color: transparent; /* Make the track invisible */
-}
-
-body::-webkit-scrollbar-thumb {
-	background-color: #888; /* Set a color for the thumb */
-	border-radius: 6px; /* Add some rounded corners to the thumb */
-}
-
-body::-webkit-scrollbar-thumb:hover {
-	background-color: #555; /* Change thumb color on hover */
-}
-
-/* Add this media query at the end of your existing styles */
-
-@media only screen and (max-width: 767px) {
-	/* Mobile-specific styles */
-
-	.App {
-		margin-top: 60px;
-	}
-
-	body {
-		margin-top: 0px;
-		font-size: 14px;
-		background-color: black;
-	}
-	.nav {
-		height: 60px;
-	}
-
-	.navbar {
-		height: 60px;
-		width: 100%;
-		overflow-y: hidden;
-		background-color: #1f1f1f1b;
-	}
-
-	.h2-flagApp {
-		margin-left: 0;
-		/* margin-left: 18px; if need to align all items*/
-		font-size: 18px;
-		font-weight: 700;
-	}
-
-	.nav-links {
-		margin-right: 0;
-		/* margin-right: 20px; if need to align all items*/
-	}
-
-	.logo {
-		display: none;
-	}
-
-	.countries-layout {
-		padding-top: 15px;
-	}
-
-	.countries-layout-container {
-		margin-left: 30px;
-		padding-top: 240px;
-		gap: 0;
-		padding: 0;
-		flex-direction: column;
-	}
-
-	.region-filter {
-		width: 87%;
-		margin-left: 8px;
-	}
-
-	.nav-links {
-		font-size: 16px;
-	}
-
-	.nav-links img {
-		width: 30px;
-		height: 30px;
-	}
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center
 }

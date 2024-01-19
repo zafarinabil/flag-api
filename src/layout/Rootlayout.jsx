@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet, useLocation, useNavigate } from 'react-router-dom';
-import { useTheme } from '../pages/ThemeContext';
-import Navbar from '../pages/Navbar';
+import { useTheme } from '../components/ThemeContext';
+import Navbar from '../components/Navbar';
 import logoLight from '../assets/logo-light.png';
 import logoDark from '../assets/logo-dark.png';
 import themeToggleSvg from '../assets/moon-bordered.svg';
@@ -46,7 +46,7 @@ const RootLayout = () => {
       </main>
       {/* Footer section */}
       <footer className="footer">
-        <p>Nabil Zafari &copy; 2023 The Flag App. All rights reserved.</p>
+        <p>Nabil Zafari &copy; 2024 The Flag App</p>
       </footer>
     </div>
   );

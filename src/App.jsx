@@ -1,21 +1,21 @@
+// App.jsx
 import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom';
 import './App.css';
 
 // Pages
-import Countries, { CountriesLoader } from './pages/Countries';
-import CountryDetails from './pages/CountryDetails';
+import Countries, { countriesLoader } from './pages/Countries';
+import CountryDetails, { countryDetailsLoader } from './pages/CountryDetails';
 
 // Layouts
 import RootLayout from './layout/Rootlayout';
 
-import { ThemeProvider } from './pages/ThemeContext';
+import { ThemeProvider } from './components/ThemeContext';
 
 const routesFromElements = createRoutesFromElements(
-  <Route path="/" element={<RootLayout />}>
-    <Route index element={<Countries />} loader={CountriesLoader} />
-    <Route path="/region/:region" element={<Countries />} loader={CountriesLoader} />
-    <Route path="/countries/:code" element={<CountryDetails />} />
+  <Route path="/" element={<RootLayout/>}>
+    <Route index element={<Countries />} loader={countriesLoader} />
+    <Route path=":name" element={<CountryDetails />} loader={countryDetailsLoader} />
   </Route>
 );
 

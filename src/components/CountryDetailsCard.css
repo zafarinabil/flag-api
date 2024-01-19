@@ -1,0 +1,127 @@
+.country-details-container {
+    display: flex;
+    margin: 130px 0 0 0;
+    min-height: 80.5vh;
+    width: 1440px;
+    padding: 20px 60px;
+    gap: 100px;
+    overflow: hidden;
+}
+
+.country-details-flag-container {
+    width: 50%;
+}
+
+.back-button {
+    margin: 0 0 20px 0;
+    width: 100px;
+}
+.back-button-img {
+    width: 45px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 0 0 5px;
+}
+
+.back-button-text {
+    margin: 0 0 0 12px;
+}
+
+.country-details-flag-frame {
+    width: 100%;
+    max-width: 550px;
+}
+
+.country-details-flag {
+    width: 100%;
+    max-height: 400px;
+    box-shadow: var(--box-shadow);
+}
+
+.country-details-information {
+    width: 50%;
+    margin: 100px 0 0 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+#information-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+#information-one {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#information-two {
+    margin: 40px 0 0 0;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.border-countries-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.border-country {
+    background-color: var(--secondary-background); /* Green background color */
+	color: var(--text-color);
+	padding: 10px 20px; /* Add padding for better appearance */
+	border: none;
+	border-radius: 5px; /* Optional: add rounded corners */
+	cursor: pointer;
+	margin: 5px; /* Add margin for spacing between buttons */
+	text-decoration: none; /* Remove underline from text */
+	font-size: 14px;
+}
+
+.border-country:hover {
+	background-color: var(--hover-color); /* Darker green color on hover */
+}
+
+@media only screen and (max-width: 767px) {
+    .country-details-container {
+        flex-direction: column;
+        padding: 15px 30px;
+        margin: 0;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .country-details-flag-container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .country-details-information {
+        width: 100%;
+        margin: 0;
+        gap: 12px;
+
+    }
+
+    #information-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #information-one {
+        margin: 0;
+        gap: 12px;
+    }
+
+    #information-two {
+        margin: 0;
+        gap: 12px;
+    }
+
+}
+

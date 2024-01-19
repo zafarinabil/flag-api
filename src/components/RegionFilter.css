@@ -1,0 +1,27 @@
+/* RegionFilter.css */
+.region-filter {
+	margin: 10px;
+}
+
+.custom-dropdown {
+	background-color: var(--secondary-background);
+	padding: 20px;
+	font-size: 14px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
+	height: 60px;
+	width: 200px;
+}
+
+.default-option {
+	font-style: italic;
+	color: #555;
+}
+
+@media only screen and (max-width: 767px) {
+
+	.custom-dropdown {
+		width: 100%;
+	}
+}

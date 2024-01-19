@@ -1,0 +1,112 @@
+/* Navbar styles */
+.nav {
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	height: 80px;
+	background-color: var(--secondary-background);
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 1440px;
+	height: 80px;
+	background-color: var(--secondary-background);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Logo styles */
+.logo {
+	width: 180px;
+	object-fit: contain;
+}
+
+.nav-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 60px;
+	color: var(--head-color);
+	font-size: 20px;
+}
+
+.nav-links :hover {
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+	text-decoration: underline;
+	color: var(--head-color);
+}
+
+.nav-links img {
+	width: 30px;
+	margin-right: 10px;
+}
+
+.h2-flagApp {
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--head-color);
+	margin-left: 60px;
+}
+
+.h2-flagApp:hover {
+	transition: all 0.2s ease-out;
+	text-decoration: underline;
+	color: var(--head-color);
+}
+
+@media only screen and (max-width: 767px) {
+	/* Mobile-specific styles */
+
+	.App {
+		margin-top: 60px;
+	}
+
+	body {
+		margin-top: 0px;
+		font-size: 14px;
+		background-color: black;
+	}
+	.nav {
+		height: 60px;
+	}
+
+	.navbar {
+		height: 60px;
+		width: 100%;
+		overflow-y: hidden;
+		background-color: #1f1f1f1b;
+	}
+
+	.h2-flagApp {
+		margin-left: 20px;
+		/* margin-left: 18px; if need to align all items*/
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	.nav-links {
+		margin-right: 20px;
+		/* margin-right: 20px; if need to align all items*/
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.nav-links {
+		font-size: 16px;
+	}
+
+	.nav-links img {
+		width: 30px;
+		height: 30px;
+	}
+}

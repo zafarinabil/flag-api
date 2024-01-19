@@ -1,96 +1,90 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useLocation, useNavigate } from 'react-router-dom';
-import SearchBar from './SearchBar';
-import RegionFilter from './RegionFilter';
+import { useLoaderData } from 'react-router-dom';
 import './Countries.css';
-import CountryCard from './CountryCard';
+import CountryCard from '../components/CountryCard';
+import SearchBar from '../components/SearchBar';
+import RegionFilter from '../components/RegionFilter';
+import loadingGif from '../assets/loading.gif';
 
 const Countries = () => {
-  const [selectedRegion, setSelectedRegion] = useState('');
-  const [countries, setCountries] = useState([]);
-  const [filteredCountries, setFilteredCountries] = useState([]);
   const [loading, setLoading] = useState(true);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const fetchCountries = async () => {
-      try {
-        const url = selectedRegion
-          ? `https://restcountries.com/v3.1/region/${selectedRegion}`
-          : 'https://restcountries.com/v3.1/all';
-        const response = await axios.get(url);
-        setCountries(response.data);
-        setFilteredCountries(response.data);
-      } catch (error) {
-        console.error('Error fetching countries:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchCountries();
-  }, [selectedRegion]);
-
-  const handleCountryClick = (country) => {
-    navigate(`/countries/${country.cca2}`);
-  };
+  const allCountries = useLoaderData();
+  const [filteredCountries, setFilteredCountries] = useState(allCountries);
+  const [selectedRegion, setSelectedRegion] = useState('');
+  const [regionFromURL, setRegionFromURL] = useState('');
 
   const handleSearch = (searchQuery) => {
-    const filtered = countries.filter((country) =>
+    const filtered = allCountries.filter((country) =>
       country.name.common.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredCountries(filtered);
   };
 
-  const location = useLocation();
-  const regionFromURL = location.pathname.split('/')[2];
+  const handleRegionChange = (region) => {
+    setSelectedRegion(region);
+
+    // Filter countries based on the selected region
+    const filtered = region ? allCountries.filter((country) => country.region === region) : allCountries;
+    setFilteredCountries(filtered);
+  };
+
+  const clearFilters = () => {
+    setSelectedRegion('');
+  };
+
+  // Sort countries alphabetically by their common names
+  const sortedCountries = filteredCountries.slice().sort((a, b) => a.name.common.localeCompare(b.name.common));
 
   useEffect(() => {
-    // Update the URL when the selected region changes
-    navigate(selectedRegion ? `/region/${selectedRegion}` : '/');
-  }, [selectedRegion, navigate]);
+    const fetchData = async () => {
+      try {
+        const res = await fetch('https://restcountries.com/v3.1/all');
+        if (!res.ok) {
+          throw new Error('Unable to fetch countries.');
+        }
+        const data = await res.json();
+        setFilteredCountries(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  // Add the following useEffect to handle the case when the user selects "All Regions"
-  useEffect(() => {
-    if (!regionFromURL && !selectedRegion) {
-      // User has selected "All Regions"
-      navigate('/');
-    }
-  }, [regionFromURL, selectedRegion, navigate]);
+    fetchData(); // Fetch data when the component mounts
+  }, []); // Empty dependency array means this effect runs once, similar to componentDidMount
+
+  if (loading) {
+    return (
+      <div className="home-container">
+        <div className='loading-container'>
+          <img className='loading-gif' src={loadingGif} alt="loading" />
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="countries-layout">
-      <div className="countries-layout-container">
-        <SearchBar onSearch={handleSearch} />
-        <RegionFilter
-          selectedRegion={selectedRegion}
-          regionFromURL={regionFromURL}
-          onRegionChange={setSelectedRegion}
-        />
+    <div className="home-container">
+      <div className="filters-container">
+        <SearchBar onSearch={handleSearch} onClear={clearFilters} />
+        <RegionFilter selectedRegion={selectedRegion} onRegionChange={handleRegionChange} />
       </div>
-      <main>
-        <div className="countries">
-          {loading ? (
-            <p>Loading...</p>
-          ) : (
-            filteredCountries.map((country) => (
-              <CountryCard
-                key={country.cca2}
-                country={country}
-                handleCountryClick={handleCountryClick}
-              />
-            ))
-          )}
-        </div>
-      </main>
+      <div className="countries-container">
+        {sortedCountries.map((country) => (
+          <CountryCard key={country.cca3} country={country} />
+        ))}
+      </div>
     </div>
   );
 };
 
-export const CountriesLoader = async () => {
-  const response = await axios.get('https://restcountries.com/v3.1/all');
-  return response.data;
+export const countriesLoader = async () => {
+  const res = await fetch('https://restcountries.com/v3.1/all');
+  if (!res.ok) {
+    throw new Error('Unable to fetch countries.');
+  }
+  return res.json();
 };
 
 export default Countries;
