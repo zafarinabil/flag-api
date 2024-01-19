@@ -95,6 +95,15 @@
         width: 100%;
     }
 
+    .country-details-container p {
+        font-size: 16px;
+
+    }
+
+    .country-details-container h2 {
+        font-size: 25px;
+    }
+
     .country-details-flag-container {
         padding: 0;
         margin: 0;
@@ -120,6 +129,10 @@
 
     #information-two {
         margin: 0;
+        gap: 12px;
+    }
+
+    .border-countries-container {
         gap: 12px;
     }
 
