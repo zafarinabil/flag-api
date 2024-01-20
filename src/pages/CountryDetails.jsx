@@ -14,9 +14,9 @@ const CountryDetails = () => {
     const country = countryArr[0];
 
     return (
-      <div>
+      <>
         <CountryDetailsCard country={country} />
-      </div>
+      </>
     );
   }
 };

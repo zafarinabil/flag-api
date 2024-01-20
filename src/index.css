@@ -1,12 +1,11 @@
 /* index.css */
 /* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@100&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@300&family=Piazzolla:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ysabeau+SC:wght@1;100;200;300;400;500;600;700;800;900;1000&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* Light theme styles */
 .root-layout.light-theme {
 	--primary-background: #f5f5f5;
 	--secondary-background: #ffffff;
-	--text-color: #4f4f4f;
+	--text-color: #5e5e5eeb;
 	--head-color: #3d3d3d;
 	--box-shadow: rgba(0, 0, 0, 0.282);
 	--hover-color: #e8e8e8;
@@ -15,8 +14,8 @@
 
 /* Dark theme styles */
 .root-layout.dark-theme {
-	--primary-background: #1f1f1f;
-	--secondary-background: #2c2c2c;
+	--primary-background: #202C36;
+	--secondary-background: #2B3844;
 	--text-color: #f2f2f2;
 	--head-color: #f2f2f2;
 	--accent-color: #2196f3;
@@ -32,6 +31,7 @@
 	padding: 0;
 	overflow-x: hidden;
 	color: var(--text-color);
+	font-family: "Montserrat", sans-serif;
 }
 
 main {
@@ -44,7 +44,6 @@ main {
 }
 
 .App {
-	font-family: 'Open Sans', sans-serif;
 	background-color: var(--primary-background);
 }
 
