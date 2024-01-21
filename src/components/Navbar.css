@@ -1,4 +1,4 @@
-/* Navbar styles */
+/* Navbar.css */
 .nav {
 	width: 100vw;
 	display: flex;
@@ -8,6 +8,7 @@
 	top: 0;
 	height: 80px;
 	background-color: var(--secondary-background);
+	z-index: 2;
 }
 
 .navbar {
@@ -32,15 +33,19 @@
 	justify-content: center;
 	align-items: center;
 	margin-right: 60px;
-	color: var(--head-color);
 	font-size: 20px;
+}
+
+.nav-links p {
+	color: var(--head-color);
+	font-weight: 500;
+	font-size: medium;
 }
 
 .nav-links :hover {
 	cursor: pointer;
 	transition: all 0.2s ease-out;
 	text-decoration: underline;
-	color: var(--head-color);
 }
 
 .nav-links img {
@@ -51,7 +56,7 @@
 .h2-flagApp {
 	text-decoration: none;
 	font-size: 24px;
-	font-weight: 700;
+	font-weight: 600;
 	color: var(--head-color);
 	margin-left: 60px;
 }
@@ -62,7 +67,24 @@
 	color: var(--head-color);
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
+	.nav {
+		width: 100%;
+	}
+	.navbar {
+		width: 100vw;
+	}
+
+	.h2-flagApp {
+		margin-left: 30px;
+	}
+
+	.nav-links {
+		margin-right: 25px;
+	}
+}
+
+@media only screen and (max-width: 724px) {
 	/* Mobile-specific styles */
 
 	.App {

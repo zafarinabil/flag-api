@@ -1,3 +1,4 @@
+/* CountryCard.css */
 .countries-card {
 	width: 300px;
 	height: 380px;
@@ -23,7 +24,7 @@
 }
 
 .flag {
-	width: 100%; 
+	width: 100%;
 	height: 100%;
 	padding: 0;
 	border-style: none;
@@ -33,14 +34,15 @@
 .countries-detail {
 	padding: 10px 30px 0 30px;
 	text-align: left;
-    height: 100%;
+	height: 100%;
 }
 
 .countries-detail h2 {
 	margin: 20px 0 20px 0;
 	font-size: 19px;
-    font-weight: 600;
+	font-weight: 600;
 	letter-spacing: 1px;
+	color: var(--head-color);
 }
 
 .countries-detail p {
@@ -49,5 +51,5 @@
 	margin: 6px;
 	overflow: hidden;
 	font-weight: 500;
-	letter-spacing: .5px;
+	letter-spacing: 0.5px;
 }

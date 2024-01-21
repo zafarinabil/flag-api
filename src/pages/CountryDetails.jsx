@@ -4,7 +4,6 @@ import { useLoaderData, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import CountryDetailsCard from "../components/CountryDetailsCard";
 
-import "./CountryDetails.css";
 
 const CountryDetails = () => {
   const navigate = useNavigate();

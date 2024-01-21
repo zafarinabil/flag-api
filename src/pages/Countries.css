@@ -34,7 +34,19 @@
 	width: 50px;
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
+	.countries-container {
+		width: 100%;
+	}
+
+	.filters-container {
+		width: 100%;
+		display: flex;
+		padding: 20px 13px;
+	}
+}
+
+@media only screen and (max-width: 724px) {
 	.filters-container {
 		width: 100%;
 		display: flex;

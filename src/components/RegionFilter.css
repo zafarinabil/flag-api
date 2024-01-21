@@ -19,8 +19,7 @@
 	color: #555;
 }
 
-@media only screen and (max-width: 767px) {
-
+@media only screen and (max-width: 724px) {
 	.custom-dropdown {
 		width: 100%;
 	}

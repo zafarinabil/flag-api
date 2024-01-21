@@ -1,78 +1,81 @@
+/* CountryDetailsCard.css */
 .country-details-container {
-    display: flex;
-    margin: 130px 0 0 0;
-    min-height: 80.5vh;
-    width: 1440px;
-    padding: 20px 60px;
-    gap: 100px;
-    overflow: hidden;
+	display: flex;
+	margin: 130px 0 0 0;
+	min-height: 80.5vh;
+	width: 1440px;
+	padding: 20px 60px;
+	gap: 100px;
+	overflow: auto;
 }
 
 .country-details-flag-container {
-    width: 50%;
+	width: 50%;
 }
 
 .back-button {
-    margin: 0 0 20px 0;
-    width: 100px;
+	margin: 0 0 20px 0;
+	width: 100px;
 }
 .back-button-img {
-    width: 45px;
-    background-color: white;
-    border-radius: 50%;
-    margin: 0 0 0 5px;
+	width: 45px;
+	background-color: white;
+	border-radius: 50%;
+	margin: 0 0 0 5px;
 }
 
 .back-button-text {
-    margin: 0 0 0 12px;
+	margin: 0 0 0 12px;
 }
 
 .country-details-flag-frame {
-    width: 100%;
-    max-width: 550px;
+	width: 100%;
+	max-width: 550px;
 }
 
 .country-details-flag {
-    width: 100%;
-    max-height: 400px;
-    box-shadow: var(--box-shadow);
+	width: 100%;
+	max-height: 400px;
+	box-shadow: var(--box-shadow);
 }
 
 .country-details-information {
-    width: 50%;
-    margin: 140px 0 0 0;
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
+	width: 50%;
+	margin: 100px 0 0 0;
+	display: flex;
+	gap: 30px;
+	flex-direction: column;
 }
 
 #information-container {
-    display: flex;
-    flex-direction: row;
-    gap: 90px;
+	display: flex;
+	flex-direction: row;
+	right: 0;
+	justify-content: space-between;
 }
 
 #information-one {
-    display: flex;
-    gap: 12px;
-    flex-direction: column;
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
 }
 
 #information-two {
-    margin: 70px 0 0 0;
-    display: flex;
-    gap: 12px;
-    flex-direction: column;
+	margin: 70px 0 0 0;
+	display: flex;
+	gap: 12px;
+	flex-direction: column;
+	right: 0;
 }
 
 .border-countries-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 
 .border-country {
-    background-color: var(--secondary-background); /* Green background color */
+	background-color: var(--secondary-background); /* Green background color */
 	color: var(--text-color);
 	padding: 10px 20px; /* Add padding for better appearance */
 	border: none;
@@ -88,72 +91,75 @@
 }
 
 .country-details-container h2 {
-    margin-bottom: 30px;
-    font-weight: 500;
-    letter-spacing: 1px;
+	margin-bottom: 30px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	color: var(--head-color);
 }
 strong {
-    font-weight: 600;
-    letter-spacing: 1px;
-
+	font-weight: 500;
+	letter-spacing: 1px;
+	color: var(--head-color);
 }
 
 .country-details-container p {
-    font-weight: 400;
-    letter-spacing: 1px;
-
+	font-weight: 400;
+	letter-spacing: 1px;
 }
 
-@media only screen and (max-width: 767px) {
-    .country-details-container {
-        flex-direction: column;
-        padding: 15px 30px;
-        margin: 0;
-        gap: 5px;
-        width: 100%;
-    }
-
-    .country-details-container p {
-        font-size: 16px;
-
-    }
-
-    .country-details-container h2 {
-        font-size: 28px;
-        margin: 0 0 5px 0;
-    }
-
-    .country-details-flag-container {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-
-    .country-details-information {
-        width: 100%;
-        margin: 0;
-        gap: 13px;
-
-    }
-
-    #information-container {
-        flex-direction: column;
-        gap: 13px;
-    }
-
-    #information-one {
-        margin: 10px 0 0 0;
-        gap: 13px;
-    }
-
-    #information-two {
-        margin: 0;
-        gap: 13px;
-    }
-
-    .border-countries-container {
-        gap: 13px;
-    }
-
+@media screen and (max-width: 1024px) {
+	.country-details-container {
+		padding: 20px 30px;
+	}
 }
 
+@media only screen and (max-width: 724px) {
+	.country-details-container {
+		flex-direction: column;
+		padding: 15px 30px;
+		margin: 0;
+		gap: 5px;
+		width: 100%;
+		min-height: 86vh;
+	}
+
+	.country-details-container p {
+		font-size: 16px;
+	}
+
+	.country-details-container h2 {
+		font-size: 28px;
+		margin: 0 0 5px 0;
+	}
+
+	.country-details-flag-container {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	.country-details-information {
+		width: 100%;
+		margin: 0;
+		gap: 13px;
+	}
+
+	#information-container {
+		flex-direction: column;
+		gap: 13px;
+	}
+
+	#information-one {
+		margin: 10px 0 0 0;
+		gap: 13px;
+	}
+
+	#information-two {
+		margin: 0;
+		gap: 13px;
+	}
+
+	.border-countries-container {
+		gap: 13px;
+	}
+}
