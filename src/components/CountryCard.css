@@ -5,7 +5,7 @@
 	background-color: var(--secondary-background);
 	border-radius: 5px;
 	overflow: hidden;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.18);
 	transition: transform 0.3s ease-in-out;
 	margin: 10px;
 	text-decoration: none;
